@@ -27,7 +27,7 @@ body {
 /*====== NAVBAR ======*/
 header {
   width: 100%;
-  height: 80px;
+  height: 100px;
   background-color: var(--pink-hard-color);
   display: flex;
   align-items: center;
@@ -36,8 +36,20 @@ header {
 }
 
 .logo-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 80px;
+}
+
+.text-logo {
+  margin-bottom: 0px;
+  font-weight: bolder;
   font-size: 20px;
-  font-weight: bold;
 }
 
 .icon-bars {
@@ -52,7 +64,7 @@ header {
 .nav-bar ul li a {
   display: block;
   color: black;
-  font-size: 15px;
+  font-size: 16px;
   padding: 10px 25px;
   border-radius: 50px;
   transition: 0.2s;
@@ -65,6 +77,15 @@ header {
 
 .nav-bar ul li a.active {
   background-color: var(--blue-soft-color);
+}
+
+.ul-navbar {
+  margin-bottom: 0px;
+}
+
+.ul-navbar a {
+  text-decoration: none !important;
+  font-weight: bolder;
 }
 
 @media only screen and (max-width: 1320px) {
@@ -88,13 +109,14 @@ header {
   .nav-bar {
     height: 0px;
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 0px;
     right: 0px;
     width: 100vw;
     background: var(--blue-hard-color);
     overflow: hidden;
     transition: 0.5s;
+    z-index: 1000;
   }
 
   .nav-bar.active {
@@ -128,10 +150,3 @@ header {
 
 }
 /*====== END NAVBAR ======*/
-
-#home {
-  height: 100vh;
-  display: flex;
-  margin-left: 5%;
-  margin-right: 5%;
-}
