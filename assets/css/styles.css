@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 :root {
-  --pink-soft-color: #FFE6E6;
-  --pink-hard-color: #F2D1D1;
+  --pink-hard-color: #FFB3B3;
+  --pink-soft-color: #F2D1D1;
   --blue-soft-color: #DAEAF1;
   --blue-hard-color: #B8E8FC;
   --white-color: #f1f1f1;
-  --font-resalt: 'Caveat', cursive;
+  --font-title-home: 'Chewy', cursive;
 }
 
 html{
@@ -24,21 +24,19 @@ html{
   box-sizing: border-box;
 }
 
-body {
-  background-color: var(--white-color);
-}
-
 /* ====== GENERALS ===== */
 .title-section {
   font-weight: bold;
-  font-size: 70px;
+  font-size: 90px;
   text-align: center;
+  color: black;
 }
 
 .subtitle-section {
-  text-align: center;
-  font-size: 30px;
+  font-size: 50px;
   margin-top: 2%;
+  text-align: center;
+  color: black;
 }
 
 .card-img-top {
@@ -51,7 +49,7 @@ body {
 header {
   width: 100%;
   height: 100px;
-  background-color: var(--pink-hard-color);
+  background-color: var(--pink-soft-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -177,13 +175,82 @@ header {
 /* ==== HOME ==== */
 #Home {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-home {
+  font-family: var(--font-title-home);
+  font-size: 130px;
+  text-shadow: 7px 4px 0px gray;
+}
+
+.subtitle-container-home {
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle-home {
+  background-color: yellow;
+  width: fit-content;
+  padding: 1.2%;
+  margin: 2%;
+  border-radius: 10px;
+}
+
+.info-container-home {
+  width: 100%;
+  text-align: center;
+}
+
+.img-container-home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-hard-color);
+  clip-path: circle(90% at 100%);
+}
+
+.img-container-home img {
+  width: 500px;
+  height: 500px;
+}
+
+.btn-container-home {
+  margin-top: 2.5%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-home {
+  background-color: #25D366;
+  padding: 2%;
+  border-radius: 25px;
+  width: fit-content;
+}
+
+.btn-home a {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn-home {
+  font-size: 40px;
 }
 /* ==== END HOME ==== */
 
 /* ==== SERVICES ==== */
 #Services {
   height: 100%;
-  padding: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
   background-color: white;
 }
 
@@ -193,7 +260,7 @@ header {
   flex-wrap: wrap;
   padding: 2%;
   margin-top: 2%;
-  background-color: var(--blue-soft-color);
+  background-color: var(--blue-hard-color);
   border-radius: 25px;
 }
 
