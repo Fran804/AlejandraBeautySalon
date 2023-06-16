@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 :root {
-  --pink-hard-color: #FFB3B3;
-  --pink-soft-color: #F2D1D1;
-  --blue-soft-color: #DAEAF1;
-  --blue-hard-color: #B8E8FC;
-  --white-color: #f1f1f1;
+  --skin-color-hard: #FFB9B9;
+  --skin-color-soft: #FFDDD2;
+  --pink-color-normal: #FFACC7;
+  --pink-color-hard: #FF8DC7;
+  --pink-color-soft: #FDCEDF;
+  --white-pink-color: #F9F5F6;
+  --blue-color-soft: #DDF3F5;
+  --blue-color-hard: #A6DCEF;
   --font-title-home: 'Chewy', cursive;
 }
 
@@ -16,6 +19,7 @@ html{
 
 
 * {
+  -webkit-box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -49,7 +53,7 @@ html{
 header {
   width: 100%;
   height: 100px;
-  background-color: var(--pink-soft-color);
+  background-color: var(--skin-color-hard);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,11 +97,11 @@ header {
 }
 
 .nav-bar ul li a:hover {
-  background-color: var(--blue-soft-color);
+  background-color: var(--blue-color-soft);
 }
 
 .nav-bar ul li a.active {
-  background-color: var(--blue-soft-color);
+  background-color: var(--blue-color-soft);
 }
 
 .ul-navbar {
@@ -134,7 +138,7 @@ header {
     left: 0px;
     right: 0px;
     width: 100vw;
-    background: var(--blue-hard-color);
+    background: var(--blue-color-hard);
     overflow: hidden;
     transition: 0.5s;
     z-index: 1000;
@@ -162,11 +166,11 @@ header {
   }
   
   .nav-bar ul li a.active {
-    background-color: var(--pink-soft-color);
+    background-color: var(--pink-color-soft);
   }
 
   .nav-bar ul li a:hover {
-    background-color: var(--pink-soft-color);
+    background-color: var(--pink-color-soft);
   }
 
 }
@@ -178,12 +182,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(../img/home-background.png);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .title-home {
   font-family: var(--font-title-home);
   font-size: 130px;
-  text-shadow: 7px 4px 0px gray;
+  color: var(--pink-color-hard);
+  text-shadow: 10px 10px 0px black;
 }
 
 .subtitle-container-home {
@@ -192,9 +200,9 @@ header {
 }
 
 .subtitle-home {
-  background-color: yellow;
+  background-color: var(--blue-color-hard);
   width: fit-content;
-  padding: 1.2%;
+  padding: 1%;
   margin: 2%;
   border-radius: 10px;
 }
@@ -210,7 +218,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--blue-hard-color);
+  background-color: var(--skin-color-soft);
   clip-path: circle(90% at 100%);
 }
 
@@ -220,14 +228,13 @@ header {
 }
 
 .btn-container-home {
-  margin-top: 2.5%;
   display: flex;
   justify-content: center;
 }
 
 .btn-home {
   background-color: #25D366;
-  padding: 2%;
+  padding: 15px;
   border-radius: 25px;
   width: fit-content;
 }
@@ -249,25 +256,24 @@ header {
 /* ==== SERVICES ==== */
 #Services {
   height: 100%;
-  padding-left: 4%;
-  padding-right: 4%;
-  background-color: white;
+  padding: 4%;
 }
 
 .services-cards-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 2%;
   margin-top: 2%;
-  background-color: var(--blue-hard-color);
   border-radius: 25px;
+  padding: 1%;
+  background-color: var(--skin-color-soft);
 }
 
 .card {
   position: relative;
   width: 18rem;
   height: 400px;
+  margin: 1.5%;
 }
 
 .card .face {
@@ -344,3 +350,113 @@ header {
   transform: perspective(600px) rotateY(360deg);
 }
 /* ==== END SERVICES ==== */
+
+/* ==== GALERY ==== */
+
+#Galery {
+  height: 100vh;
+}
+
+.div-carousel {
+  height: 600px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+main #carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / 8;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+  pointer-events: none;
+}
+
+div.item {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-color: coral;
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+  background-size: contain;
+}
+
+div.item:nth-of-type(1) {
+  --offset: 1;
+  background-image: url(https://images.ctfassets.net/4ck2s8k0bkzh/K0kijxqhg6kVolCi7nAOX/f702e033e509b0571a3fe3cf6e91bc8b/Banner-Tablet.jpg);
+}
+div.item:nth-of-type(2) {
+  --offset: 2;
+  background-image: url(https://images.ctfassets.net/4ck2s8k0bkzh/K0kijxqhg6kVolCi7nAOX/f702e033e509b0571a3fe3cf6e91bc8b/Banner-Tablet.jpg);
+}
+div.item:nth-of-type(3) {
+  --offset: 3;
+  background-image: url(https://images.ctfassets.net/4ck2s8k0bkzh/K0kijxqhg6kVolCi7nAOX/f702e033e509b0571a3fe3cf6e91bc8b/Banner-Tablet.jpg);
+}
+div.item:nth-of-type(4) {
+  --offset: 4;
+  background-image: url(https://images.ctfassets.net/4ck2s8k0bkzh/K0kijxqhg6kVolCi7nAOX/f702e033e509b0571a3fe3cf6e91bc8b/Banner-Tablet.jpg);
+}
+div.item:nth-of-type(5) {
+  --offset: 5;
+  background-image: url(https://images.ctfassets.net/4ck2s8k0bkzh/K0kijxqhg6kVolCi7nAOX/f702e033e509b0571a3fe3cf6e91bc8b/Banner-Tablet.jpg);
+}
+
+input:nth-of-type(1) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#carousel {
+  --position: 1;
+}
+
+input:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#carousel {
+  --position: 2;
+}
+
+input:nth-of-type(3) {
+  grid-column: 4 /5;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#carousel {
+  --position: 3;
+}
+
+input:nth-of-type(4) {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ main#carousel {
+  --position: 4;
+}
+
+input:nth-of-type(5) {
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#carousel {
+  --position: 5;
+}
+
+/* ==== END GALERY ==== */
