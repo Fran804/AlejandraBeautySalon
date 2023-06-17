@@ -38,7 +38,7 @@ html{
 }
 
 .subtitle-section {
-  font-size: 50px;
+  font-size: 25px;
   margin-top: 2%;
   text-align: center;
   color: black;
@@ -264,7 +264,7 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2%;
+  margin-top: 4%;
   border-radius: 25px;
   padding: 1%;
   background-color: var(--skin-color-soft);
@@ -355,12 +355,13 @@ header {
 /* ==== GALERY ==== */
 
 #Galery {
-  height: 100vh;
+  height: 100%;
 }
 
 .div-carousel {
   height: 600px;
-  margin-top: 5%;
+  margin-top: 3%;
+  margin-bottom: 2%;
   display: grid;
   grid-template-rows: 500px 100px;
   grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
@@ -509,7 +510,7 @@ input[type="radio"]:focus {
 
 /* ==== CLIENTS ==== */
 #Reviews {
-  height: 100vh;
+  height: 100%;
 }
 
 .review-cards-container {
@@ -549,3 +550,54 @@ input[type="radio"]:focus {
   margin-bottom: 4%;
 }
 /* ==== END CLIENTS ==== */
+
+/* ==== CONTACT ==== */
+
+#Contatc {
+  height: 100vh;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  gap: 10%;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-contact-whats {
+  color: #25D366;
+  font-size: 60px;
+}
+
+.icon-contact-email {
+  font-size: 60px;
+  color: rgb(163, 44, 44);
+}
+
+.icon-contact-instagram {
+  font-size: 60px;
+  color: #E1306C;
+}
+
+.contact-text {
+  margin-top: 10%;
+  font-size: 25px;
+  color: black;
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+.contact-text:hover {
+  color: var(--pink-color-hard);
+}
+
+/* ==== END CONTACT ==== */
