@@ -39,7 +39,7 @@ html{
 
 .subtitle-section {
   font-size: 25px;
-  margin-top: 2%;
+  margin-top: 1%;
   text-align: center;
   color: black;
 }
@@ -529,7 +529,7 @@ input[type="radio"]:focus {
   margin: 1%;
 }
 
-.review-card p, h3 {
+.review-name-card, .review-text-card {
   margin-bottom: 4%;
 }
 
@@ -538,9 +538,13 @@ input[type="radio"]:focus {
   margin-bottom: 2%;
 }
 
-.revie-card-img {
+.review-img-card{
   width: 200px;
+  height: 200px;
+  background-image: url("https://images.ctfassets.net/4ck2s8k0bkzh/K0kijxqhg6kVolCi7nAOX/f702e033e509b0571a3fe3cf6e91bc8b/Banner-Tablet.jpg");
+  background-size: cover;
   border-radius: 50%;
+  margin: auto;
   margin-bottom: 4%;
 }
 
@@ -557,10 +561,22 @@ input[type="radio"]:focus {
   height: 100vh;
 }
 
+.contact-logo-container {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  background: antiquewhite;
+}
+
+.contact-logo {
+  width: 200px;
+  height: 200px;
+}
+
 .contact-container {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 3%;
   gap: 10%;
   flex-wrap: wrap;
 }
@@ -568,9 +584,24 @@ input[type="radio"]:focus {
 .contact-info {
   display: flex;
   justify-content: center;
-  height: 200px;
+  width: 350px;
+  height: 300px;
   flex-direction: column;
   align-items: center;
+  background-color: var(--pink-color-soft);
+  border-radius: 10%;
+  padding: 1.5%;
+  text-align: center;
+  word-wrap: break-word;
+  margin: 1.5%;
+}
+
+.contact-info:hover {
+  cursor: pointer;
+  color: var(--white-pink-color);
+  background-color: var(--pink-color-hard);
+  box-shadow: 0 4px 16px var(--skin-color-hard);
+  transition: all 0.4s ease;
 }
 
 .icon-contact-whats {
@@ -583,21 +614,33 @@ input[type="radio"]:focus {
   color: rgb(163, 44, 44);
 }
 
-.icon-contact-instagram {
+.icon-contact-insta {
   font-size: 60px;
   color: #E1306C;
 }
 
-.contact-text {
-  margin-top: 10%;
-  font-size: 25px;
-  color: black;
-  text-decoration: underline;
-  transition: all 0.3s;
+.contact-title-card {
+  margin-top: 6%;
+  font-size: 22px;
 }
 
-.contact-text:hover {
-  color: var(--pink-color-hard);
+.contact-text {
+  margin-top: 2%;
+  font-size: 25px;
+  color: black;
+}
+
+.contact-map-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+}
+
+.contact-map {
+  border-radius: 25px;
+  margin: 2%;
 }
 
 /* ==== END CONTACT ==== */
