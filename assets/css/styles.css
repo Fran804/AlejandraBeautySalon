@@ -288,7 +288,8 @@ header {
 
 @media only screen and (max-width: 460px) {
   #Home {
-    background-position: top;
+    background-image: url(../img/home-background.png);
+    background-size: cover;
   }
 
   .logo-img {
