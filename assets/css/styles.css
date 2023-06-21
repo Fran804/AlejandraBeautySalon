@@ -190,7 +190,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/home-background.png);
+  background: url(../img/home-background.png);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -287,6 +287,10 @@ header {
 }
 
 @media only screen and (max-width: 460px) {
+  #Home {
+    background-position: top;
+  }
+
   .logo-img {
     width: 60px;
   }
