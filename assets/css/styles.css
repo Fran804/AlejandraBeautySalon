@@ -288,10 +288,7 @@ header {
 
 @media only screen and (max-width: 460px) {
   #Home {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #FFEFFF;
+    background: #FFEFFF;
   }
 
   .logo-img {
