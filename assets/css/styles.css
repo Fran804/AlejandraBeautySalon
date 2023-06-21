@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
 
 :root {
   --skin-color-hard: #FFB9B9;
@@ -12,6 +13,7 @@
   --blue-color-hard: #A6DCEF;
   --form-control-color: rebeccapurple;
   --font-title-home: 'Chewy', cursive;
+  --font-title: 'Signika', sans-serif;
 }
 
 html{
@@ -31,10 +33,11 @@ html{
 
 /* ====== GENERALS ===== */
 .title-section {
+  font-family: var(--font-title);
   font-weight: bold;
   font-size: 70px;
   text-align: center;
-  color: black;
+  color: rgb(26, 25, 25);
 }
 
 .subtitle-section {
@@ -242,15 +245,22 @@ header {
   padding: 15px;
   border-radius: 25px;
   width: fit-content;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
 }
 
-.btn-home a {
+.btn-home p {
   color: white;
   font-weight: bold;
   font-size: 18px;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.btn-home:hover {
+  background-color: #10e65f;
+  box-shadow: 0 4px 16px #25D366;
 }
 
 .icon-btn-home {
@@ -596,11 +606,22 @@ input[type="radio"]:focus {
 .review-img-card{
   width: 200px;
   height: 200px;
-  background-image: url("https://images.ctfassets.net/4ck2s8k0bkzh/K0kijxqhg6kVolCi7nAOX/f702e033e509b0571a3fe3cf6e91bc8b/Banner-Tablet.jpg");
   background-size: cover;
   border-radius: 50%;
   margin: auto;
   margin-bottom: 4%;
+}
+
+.review1 {
+  background-image: url("../img/review1.jpg");
+}
+
+.review2 {
+  background-image: url("../img/review2.jpg");
+}
+
+.review3 {
+  background-image: url("../img/review3.jpg");
 }
 
 .stars-icons i {
