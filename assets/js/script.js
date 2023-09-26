@@ -1,35 +1,17 @@
 // ====== NAVBAR ======
 var iconBars = document.querySelector('.icon-bars');
 var navBar = document.querySelector('.nav-bar');
-var homeNavbar = document.querySelector('.homeNav');
-var servicesNavbar = document.querySelector('.servicesNav');
-var galeryNavbar = document.querySelector('.galeryNav');
-var reviewsNavbar = document.querySelector('.reviewsNav');
-var contactNavbar = document.querySelector('.contactNav');
+var listNavar = document.querySelectorAll('.listNav');
 
 iconBars.addEventListener('click', () => {
   navBar.classList.toggle("active")
 });
 
-homeNavbar.addEventListener('click', () => {
-  navBar.classList.remove("active");
-});
-
-servicesNavbar.addEventListener('click', () => {
-  navBar.classList.remove("active");
-});
-
-galeryNavbar.addEventListener('click', () => {
-  navBar.classList.remove("active");
-});
-
-reviewsNavbar.addEventListener('click', () => {
-  navBar.classList.remove("active");
-});
-
-contactNavbar.addEventListener('click', () => {
-  navBar.classList.remove("active");
-});
+listNavar.forEach((e) => {
+  e.addEventListener('click', () => {
+    navBar.classList.remove("active");
+  })
+})
 // ====== END NAVBAR ======
 
 // ====== HOME ======
